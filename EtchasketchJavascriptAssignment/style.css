@@ -1,2 +1,28 @@
-* { }
-.blue { color: yellow; }
+* { margin: 0px; padding: 0px; border-spacing: 0px;  }
+#etchasketch-device {
+    background-color: maroon;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+#etchasketch-device h1 {
+    color: beige;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#drawing-area {
+    background-color: lightgray;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.drawing-board-location {
+    background-color: gray;
+    box-sizing: border-box;
+    width: 1em;
+    height: 1em;
+}
+.painted {
+    background-color: black;
+}
