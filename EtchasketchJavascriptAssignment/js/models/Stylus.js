@@ -1,12 +1,18 @@
 export class Stylus {
     constructor() {
-        this.x = 0;
-        this.y = 0;
+        this.minX = 0;
+        this.minY = 0;
         this.maxX = 50;
         this.maxY = 50;
+
+        // Start in top left corner
+        this.x = this.minX;
+        this.y = this.maxY;
     }
     getX() { return this.x; }
     getY() { return this.y; }
+    getMinX() { return this.minX; }
+    getMinY() { return this.minY; }
     getMaxX() { return this.maxX; }
     getMaxY() { return this.maxY; }
     moveRight() {
@@ -14,7 +20,7 @@ export class Stylus {
             this.x++;
     }
     moveLeft() {
-        if (this.x > 0)
+        if (this.x > this.minX)
             this.x--;
     }
     moveUp() {
@@ -22,7 +28,7 @@ export class Stylus {
             this.y++;
     }
     moveDown() {
-        if (this.y > 0)
+        if (this.y > this.minY)
             this.y--;
     }
     
