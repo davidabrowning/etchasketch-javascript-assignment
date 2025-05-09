@@ -6,9 +6,9 @@ export class DrawingBoard {
         this.drawingArea = document.getElementById("drawing-area");
     }
     getStylus() { return this.stylus; }
-    initialize() {
+    drawTable() {
         let table = document.createElement("table");
-        table.id = "drawing-table";
+        table.id = ("drawing-table");
         this.drawingArea.appendChild(table);
         for (let y = this.stylus.maxY; y >= 0; y--) {
             let row = document.createElement("tr");
@@ -21,9 +21,14 @@ export class DrawingBoard {
             }
         }
         this.paintAtStylusLocation();
-        document.onkeydown = function() {
-            this.moveRight();
-        }
+    }
+    deleteTable() {
+        let table = document.getElementById("drawing-table");
+        table.remove();
+    }
+    erase() {
+        this.deleteTable();
+        this.drawTable();
     }
     getCellByLocation(x, y) {
         let cell = document.getElementById(x + "x" + y + "y");

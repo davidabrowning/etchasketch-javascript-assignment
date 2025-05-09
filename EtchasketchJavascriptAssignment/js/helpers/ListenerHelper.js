@@ -1,9 +1,10 @@
 export class ListenerHelper{
     static addListeners(drawingBoard) {
         ListenerHelper.addStylusListeners(drawingBoard);
+        ListenerHelper.addEraseBoardListener(drawingBoard);
     }
     static addStylusListeners(drawingBoard) {
-        document.onkeydown = function(e) {
+        document.onkeydown = (e) => {
             switch (e.key) {
                 case "ArrowLeft":
                 case "a":
@@ -26,6 +27,12 @@ export class ListenerHelper{
                     drawingBoard.moveDown();
                     break;
             }
+        }
+    }
+    static addEraseBoardListener(drawingBoard) {
+        let eraseButton = document.getElementById("shake-button");
+        eraseButton.onclick = () => {
+            drawingBoard.erase();
         }
     }
 }
