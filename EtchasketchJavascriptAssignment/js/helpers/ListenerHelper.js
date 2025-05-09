@@ -1,6 +1,7 @@
 export class ListenerHelper{
     static addListeners(drawingBoard) {
         ListenerHelper.addKeyboardListeners(drawingBoard);
+        ListenerHelper.addDrawingAreaListener(drawingBoard);
         ListenerHelper.addShakeButtonListener(drawingBoard);
     }
     static addKeyboardListeners(drawingBoard) {
@@ -34,6 +35,12 @@ export class ListenerHelper{
                     drawingBoard.erase();
                     break;
             }
+        }
+    }
+    static addDrawingAreaListener(drawingBoard) {
+        let drawingArea = document.getElementById("drawing-area");
+        drawingArea.onclick = () => {
+            alert("Draw using the arrow keys or WASD keys on your keyboard!");
         }
     }
     static addShakeButtonListener(drawingBoard) {
