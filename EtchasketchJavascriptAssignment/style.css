@@ -3,13 +3,17 @@
     background-color: maroon;
     border: 1px solid black;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 1rem 5rem 1rem 5rem;
     margin: 1rem;
+    text-align: center;
 }
 #etchasketch-device h1 {
     color: beige;
     text-align: center;
     margin-bottom: 1rem;
+    font-family: 'Brush Script MT', 'cursive', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    font-weight: 10;
 }
 #drawing-area {
     background-color: lightgray;
@@ -20,11 +24,13 @@
 #drawing-table {
     margin: auto;
     border: 1px solid black;
+    width: max(400px, min(60vh, 60vw));
+    height: max(400px, min(60vh, 60vw));
 }
 .drawing-board-location {
     box-sizing: border-box;
-    width: 1em;
-    height: 1em;
+    width: 1%;
+    height: 1%;
 }
 .painted {
     background-color: black;
@@ -33,9 +39,10 @@
     background-color: white;
     border: 1px solid black;
     border-radius: 2rem;
-    font-size: larger;
+    font-size: x-large;
     text-align: center;
     display: inline-block;
     padding: 1rem;
     margin: 1rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
