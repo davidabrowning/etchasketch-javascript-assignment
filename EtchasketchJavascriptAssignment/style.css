@@ -1,4 +1,7 @@
 * { margin: 0px; padding: 0px; border-spacing: 0px;  }
+body {
+    width: max(100%, 800px);
+}
 #etchasketch-device {
     background-color: maroon;
     border: 1px solid black;
