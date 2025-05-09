@@ -1,4 +1,4 @@
-class TestHelper {
+export class TestHelper {
     static testCounter = 1;
     static printSuccess(testName) {
         let text = document.createTextNode(this.testCounter++ + ". Success: " + testName);
