@@ -21,6 +21,7 @@ body {
 #drawing-area {
     background-color: lightgray;
     padding: 1rem;
+    border: 1px solid black;
     border-radius: 1rem;
     text-align: center;
 }

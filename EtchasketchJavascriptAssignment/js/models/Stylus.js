@@ -31,5 +31,4 @@ export class Stylus {
         if (this.y > this.minY)
             this.y--;
     }
-    
 }
