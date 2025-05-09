@@ -34,5 +34,11 @@ export class ListenerHelper{
         eraseButton.onclick = () => {
             drawingBoard.erase();
         }
+        eraseButton.onmouseover = () => {
+            eraseButton.classList.add("active");
+        }
+        eraseButton.onmouseout = () => {
+            eraseButton.classList.remove("active");
+        }
     }
 }
