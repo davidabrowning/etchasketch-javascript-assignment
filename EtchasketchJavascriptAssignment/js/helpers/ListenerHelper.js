@@ -1,9 +1,9 @@
 export class ListenerHelper{
     static addListeners(drawingBoard) {
-        ListenerHelper.addStylusListeners(drawingBoard);
-        ListenerHelper.addEraseBoardListener(drawingBoard);
+        ListenerHelper.addKeyboardListeners(drawingBoard);
+        ListenerHelper.addShakeButtonListener(drawingBoard);
     }
-    static addStylusListeners(drawingBoard) {
+    static addKeyboardListeners(drawingBoard) {
         document.onkeydown = (e) => {
             switch (e.key) {
                 case "ArrowLeft":
@@ -26,10 +26,17 @@ export class ListenerHelper{
                 case "S":
                     drawingBoard.moveDown();
                     break;
+                case " ":
+                case "Escape":
+                case "Delete":
+                case "Backspace":
+                case "Enter":
+                    drawingBoard.erase();
+                    break;
             }
         }
     }
-    static addEraseBoardListener(drawingBoard) {
+    static addShakeButtonListener(drawingBoard) {
         let eraseButton = document.getElementById("shake-button");
         eraseButton.onclick = () => {
             drawingBoard.erase();

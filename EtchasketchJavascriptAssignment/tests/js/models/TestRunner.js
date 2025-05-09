@@ -9,11 +9,6 @@ export class TestRunner {
         let drawingBoard = new DrawingBoard();
         let stylus = new Stylus();
 
-        // Check that testHelper is working
-        testName = "True is true";
-        TestHelper.assertTrue(testName, true);
-
-        // Stylus tests
         testName = "Stylus x starts at minX";
         stylus = new Stylus();
         TestHelper.assertEquals(testName, stylus.getMinX(), stylus.getX());
@@ -34,9 +29,8 @@ export class TestRunner {
 
         testName = "Stylus is still at x=maxX even after moving right 123456 times";
         stylus = new Stylus();
-        for (let i = 0; i < 123456; i++) {
+        for (let i = 0; i < 123456; i++)
             stylus.moveRight();
-        }
         TestHelper.assertEquals(testName, stylus.getMaxX(), stylus.getX());
 
         testName = "Stylus is still at x=0 even after attempting to move left from 0";
