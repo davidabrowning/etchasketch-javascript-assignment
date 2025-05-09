@@ -17,8 +17,11 @@
     border-radius: 1rem;
     text-align: center;
 }
+#drawing-table {
+    margin: auto;
+    border: 1px solid black;
+}
 .drawing-board-location {
-    background-color: gray;
     box-sizing: border-box;
     width: 1em;
     height: 1em;

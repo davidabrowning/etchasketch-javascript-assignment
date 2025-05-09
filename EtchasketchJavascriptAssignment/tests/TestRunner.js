@@ -14,11 +14,13 @@ function runAllTests() {
     TestHelper.assertTrue(testName, true);
 
     // Stylus tests
-    testName = "Stylus x starts at 0";
-    TestHelper.assertEquals(testName, 0, new Stylus().getX());
+    testName = "Stylus x starts at minX";
+    stylus = new Stylus();
+    TestHelper.assertEquals(testName, stylus.getMinX(), stylus.getX());
 
-    testName = "Stylus y starts at 0";
-    TestHelper.assertEquals(testName, 0, new Stylus().getY());
+    testName = "Stylus y starts at maxY";
+    stylus = new Stylus();
+    TestHelper.assertEquals(testName, stylus.getMaxY(), stylus.getY());
 
     testName = "Stylus is at x=1 after moving to the right";
     stylus = new Stylus();
